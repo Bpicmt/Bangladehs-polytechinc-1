@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainColor : rgb(255, 102, 0);
+    --loginpage-color: rgb(49, 49, 49);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/********** Navigation Panel **********/
+
+.header {
+    background: rgb(206, 206, 206);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li, .signup {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li a, .signup {
+    color: var(--loginpage-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: .7s;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -7px;
+    transition: .7s;
+    border-radius: 7px;
+    background: var(--loginpage-color);
+}
+
+.nav ul li a:hover {
+    color: var(--loginpage-color);
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.signup {
+    border: 1px solid var(--loginpage-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: .7s;
+}
+
+.signup:hover {
+    background : var(--loginpage-color);
+    color: #fff;
+}
+
+.menu-option {
+    display: none;
+}
+
+.menu-icon {
+    padding: 6px;
+    cursor: pointer;
+    border: 3px solid #000;
+}
+
+.menu-icon[name="close"] {
+    display: none;
+}
+
+
+/********** Notice Area **********/
+
+.student-details {
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px 0;
+}
+
+.student-details p {
+    color: #5656f7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.student-details form {
+    text-align: center;
+}
+
+.student-details form input {
+    font-size: 15px;
+    padding: 7px 15px;
+    border: 1px solid rgb(87, 87, 87);
+    outline: none;
+    border-radius: 7px;
+}
+
+.student-details form button {
+    font-size: 15px;
+    padding: 7px 8px;
+    border: 1px solid rgb(87, 87, 87);
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.student-details form button:active {
+    background: rgb(145, 145, 145);
+}
+
+
+
+/********** Footer Area **********/
+
+.footer {
+    color: rgb(124, 250, 231);
+    width: 100%;
+    padding: 4% 0;
+    background: rgb(17 17 17);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin: 25px 0 0 0;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(124, 250, 231);
+}
+
+.footer-col ul li a::after {
+    content: '';
+    background: rgb(124, 250, 231);
+    width: 0;
+    height: 3px;
+    bottom: -7px;
+    border-radius: 7px;
+    transition: 0.5s;
+    left: 50%;
+    position: absolute;
+    transform: translatex(-50%)
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright p {
+    color: rgb(124, 250, 231);
+    font-weight: bold;
+}
+
+.footer-icon a {
+    cursor: auto;    
+}
+
+.footer-icon img {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+

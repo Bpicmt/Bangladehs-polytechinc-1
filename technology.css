@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainColor : rgb(255, 102, 0);
+    --loginpage-color: rgb(49, 49, 49);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/********** Navigation Panel **********/
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li, .signup {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li a, .signup {
+    color: var(--loginpage-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: .7s;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -7px;
+    transition: .7s;
+    border-radius: 7px;
+    background: var(--loginpage-color);
+}
+
+.nav ul li a:hover {
+    color: var(--loginpage-color);
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.signup {
+    border: 1px solid var(--loginpage-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: .7s;
+}
+
+.signup:hover {
+    background : var(--loginpage-color);
+    color: #fff;
+}
+
+.menu-option {
+    display: none;
+}
+
+.menu-icon {
+    padding: 6px;
+    cursor: pointer;
+    border: 3px solid #000;
+}
+
+.menu-icon[name="close"] {
+    display: none;
+}
+
+
+
+/********** Course + Otheers Area **********/
+
+.section-2, .section-3 {
+    text-align: center;
+    margin: 70px 0 0 0;
+    padding: 0 20px;
+}
+
+.section-2 h1, .section-3 h1 {
+    color: rgb(63, 62, 62);
+    font-weight: bold;
+    position: relative;
+}
+
+.section-2 h1::after, .section-3 h1::after {
+    content: '';
+    background: var(--mainColor);
+    width: 10%;
+    height: 5px;
+    border-radius: 7px;
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translateX(-50%);
+}
+
+.course-card, .others-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card {
+    width: 300px;
+    background: rgb(200 200 200);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px 0 0 0;
+    box-shadow: 3px 3px 10px rgb(72, 70, 70), -1px -1px 5px rgb(164, 162, 162);
+}
+
+.card:hover {
+    box-shadow: 6px 6px 13px rgb(72, 70, 70), -3px -3px 5px rgb(164, 162, 162);
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    margin: 0 0 30px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h3 {
+    padding: 10px 20px;
+}
+
+.card p {
+    padding: 5px 20px;
+}
+
+.cost {
+    font-weight: bold;
+}
+
+.read {
+    padding: 20px 0;
+}
+
+.read button {
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background: var(--mainColor);
+    transition: .5s;
+}
+
+.read button:hover {
+    padding: 8px 40px 8px 15px;
+}
+
+
+
+.card-other {
+    width: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 50px 0 0 0;
+    position: relative;
+    box-shadow: 3px 3px 10px rgb(72, 70, 70), -1px -1px 5px rgb(164, 162, 162);
+}
+
+.card-other img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.color-layer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 10px;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.color-layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.color-layer h3 {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    color: #fff;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.color-layer:hover h3 {
+    opacity: 1;
+    bottom: 70%;
+}
+
+
+
+/********** Footer Area **********/
+
+.footer {
+    color: rgb(124, 250, 231);
+    width: 100%;
+    padding: 4% 0;
+    background: rgb(17 17 17);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin: 25px 0 0 0;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(124, 250, 231);
+}
+
+.footer-col ul li a::after {
+    content: '';
+    background: rgb(124, 250, 231);
+    width: 0;
+    height: 3px;
+    bottom: -7px;
+    border-radius: 7px;
+    transition: 0.5s;
+    left: 50%;
+    position: absolute;
+    transform: translatex(-50%)
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright p {
+    color: rgb(124, 250, 231);
+    font-weight: bold;
+}
+
+.footer-icon a {
+    cursor: auto;    
+}
+
+.footer-icon img {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}

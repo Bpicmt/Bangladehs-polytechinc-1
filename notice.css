@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainColor : rgb(255, 102, 0);
+    --loginpage-color: rgb(49, 49, 49);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/********** Navigation Panel **********/
+
+.header {
+    background: rgb(206, 206, 206);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li, .signup {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li a, .signup {
+    color: var(--loginpage-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: .7s;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -7px;
+    transition: .7s;
+    border-radius: 7px;
+    background: var(--loginpage-color);
+}
+
+.nav ul li a:hover {
+    color: var(--loginpage-color);
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.signup {
+    border: 1px solid var(--loginpage-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: .7s;
+}
+
+.signup:hover {
+    background : var(--loginpage-color);
+    color: #fff;
+}
+
+.menu-option {
+    display: none;
+}
+
+.menu-icon {
+    padding: 6px;
+    cursor: pointer;
+    border: 3px solid #000;
+}
+
+.menu-icon[name="close"] {
+    display: none;
+}
+
+
+/********** Notice Area **********/
+
+.notice-body {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.notice-body h1 {
+    color: rgb(86, 86, 247);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.notice {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.notice .num {
+    color: #fff;
+    font-weight: bold;
+    background: rgb(86, 86, 247);
+    border-radius: 50px;
+    padding: 15px 80px;
+}
+
+.notice-right-item {
+    margin-left: 40px;
+    line-height: 25px;
+}
+
+.note {
+    font-weight: bold;
+}
+
+.date {
+    color: #858585;
+}
+
+.notice-right-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.fa-solid {
+    border: 1px solid #000;
+    padding: 3px 25px;
+    margin-top: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fa-solid:hover {
+    color: #fff;
+    background: rgb(86, 86, 247);
+}
+
+
+
+/********** Footer Area **********/
+
+.footer {
+    color: rgb(124, 250, 231);
+    width: 100%;
+    padding: 4% 0;
+    background: rgb(17 17 17);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin: 25px 0 0 0;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+.footer-col ul li a:hover {
+    color: rgb(124, 250, 231);
+}
+
+.footer-col ul li a::after {
+    content: '';
+    background: rgb(124, 250, 231);
+    width: 0;
+    height: 3px;
+    bottom: -7px;
+    border-radius: 7px;
+    transition: 0.5s;
+    left: 50%;
+    position: absolute;
+    transform: translatex(-50%)
+}
+
+.footer-col ul li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding: 1% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright p {
+    color: rgb(124, 250, 231);
+    font-weight: bold;
+}
+
+.footer-icon a {
+    cursor: auto;    
+}
+
+.footer-icon img {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+

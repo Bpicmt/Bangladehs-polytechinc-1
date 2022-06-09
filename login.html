@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bpi.ac.bd.login</title>
+    <link rel="shortcut icon" href="../bpi-img/EEE.jpg" style="width: 10px;">
+    <link rel="stylesheet" href="../login/login.css" type="text/css">
+    <link rel="stylesheet" href="../bpi/bpi-responsive.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+<!------------------ Navigation Area ------------------>
+<div class="header">
+    <div class="nav active">
+        <a href="../bpi/bpi.html"><img src="../bpi-img/bpi-web-logo.png" alt="" class="logo"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../bpi/bpi.html">Home</a></li>
+                <li><a href="../Academics/Academics.html">Academics</a></li>
+                <li><a href="">Admissions</a></li>
+                <li><a href="../technology/technology.html">Technology</a></li>
+                <li><a href="../notice/notice.html">Notice</a></li>
+                <li><a href="">Photo</a></li>
+                <li><a href="">Other activities</a></li>
+                <li><a href="../Contact/Contact.html">Contact</a></li>
+                <a class="signup" href="../login/login.html">Sign Up</a>
+            </ul>
+        </div>
+        <div class="menu-option">
+            <img class="menu-icon" src="../bpi-img/menu-bar.png" name="open" onclick="show()">
+            <img class="menu-icon" src="../bpi-img/menu-bar-close.png" name="close" onclick="hide()">
+        </div>
+    </div>
+
+<!------------------ Login Area ------------------>
+
+    <form class="login">
+        <h1>Login</h1>
+        <div class="input-sec">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-sec">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Enter Password" required id="pass">
+            <span class="eye" onclick="eye_func()">
+                <img src="../bpi-img/eye-open.png" id="show">
+                <img src="../bpi-img/eye-close.png" id="hide">
+            </span>
+        </div>
+        <div class="btn-sec">
+            <button class="login-btn">Login</button>
+            <button class="forget-btn">Forget Password</button>
+            <button class="create-btn">Create Account</button>
+        </div>
+    </form>
+    
+        
+
+        <script src="../bpi/bpi.js"></script>
+
+</body>
+</html>
+<!-- 
+<form class="login-page">
+    <h1>Login In</h1>
+    <div class="login-input">
+        <input type="email" placeholder="Enter your email">
+    </div>
+    <div class="login-input">
+        <input type="password" placeholder="Enter password" id="pass">
+        <span class="eye" onclick="eye_func()">
+            <img src="../bpi-img/eye-open.png" id="show">
+            <img src="../bpi-img/eye-close.png" id="hide">
+        </span>
+    </div>
+    <div class="btn-section">
+        <div>
+            <button class="login-btn">Login</button>
+        </div>
+        <div>
+            <button class="forget-btn">Forget Password</button>
+        </div>
+        <div>
+            <button class="create-btn">Create Account</button>
+        </div>
+    </div>
+</form> -->

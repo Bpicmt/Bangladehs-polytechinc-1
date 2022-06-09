@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainColor : rgb(255, 102, 0);
+    --loginpage-color: rgb(49, 49, 49);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/********** Navigation Panel **********/
+
+.header {
+    background: radial-gradient(rgb(247, 229, 248), rgb(248, 231, 160));
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav {
+    padding: 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li, .signup {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav ul li a, .signup {
+    color: var(--loginpage-color);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: .7s;
+}
+
+.nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: -7px;
+    transition: .7s;
+    border-radius: 7px;
+    background: var(--loginpage-color);
+}
+
+.nav ul li a:hover {
+    color: var(--loginpage-color);
+}
+
+.nav ul li a:hover::after {
+    width: 100%;
+}
+
+.signup {
+    border: 1px solid var(--loginpage-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: .7s;
+}
+
+.signup:hover {
+    background : var(--loginpage-color);
+    color: #fff;
+}
+
+.menu-option {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon[name="close"] {
+    display: none;
+}
+
+
+
+/********** Login Area **********/
+
+.login {
+    color: #fff;
+    width: 40%;
+    background: rgba(0,0,0,0.85);
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 8px #666666,
+                0px 0px 8px #666666;
+}
+
+.login h1 {
+    text-align: center;
+    padding: 30px 0 30px 0;
+    font-size: 30px;
+}
+
+.input-sec {
+    margin: 30px auto;
+    width: 85%;
+    border-bottom: 1px solid #fff;
+}
+
+.fa-solid {
+    color: #ccc;
+    padding: 0 10px;
+}
+
+.input-sec input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 85%;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+.eye {
+    position: absolute;    
+}
+
+.eye img {
+    width: 20px;
+    cursor: pointer;
+}
+
+#show {
+    display: none;
+}
+
+.btn-sec {
+    margin: 50px 0 40px 0;
+}
+
+.login-btn, .create-btn {
+    font-size: 17px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 85%;
+    margin: 20px auto;
+    padding: 8px 0;
+    display: block;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;    
+}
+
+.forget-btn {
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    width: 30%;
+    margin: 0 auto;
+    padding-bottom: 8px;
+    display: block;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+}
+
+/* .login-page {
+    width: 40%;
+    text-align: center;
+    background: rgb(20, 20, 20);
+    top: 55%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 5px 5px 3px rgb(62, 62, 62),
+                -1px 2px 3px rgb(62 67 62);
+}
+
+.login-page h1 {
+    padding: 20px 0 5px 0;
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+}
+
+.login-input {
+    width: 80%;
+    margin: 20px auto;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0 5px 0;
+}
+
+.login-input input {
+    border: none;
+    outline: none;
+    width: 90%;
+    color: #ccc;
+    background: transparent;
+}
+
+.eye {
+    position: absolute;
+}
+
+.eye img {
+    width: 20px;
+    cursor: pointer;
+}
+
+#show {
+    display: none;
+}
+
+.btn-section {
+    margin: 60px 0 10px 0;
+}
+
+.login-btn, .create-btn {
+    width: 80%;
+    font-weight: bold;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 9px 0;
+    outline: none;
+    border: 1px solid #fff;
+    background: transparent;
+    transition: 0.5s;
+}
+
+.forget-btn {
+    width: 30%;
+    margin: 0 0 20px 0;
+    padding-bottom: 5px;
+    color: #ccc;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.login-btn, .create-btn {
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    color: var(--mainColor);
+}
+
+.forget-btn:hover {
+    color: var(--mainColor);
+}
+
+.create-btn:hover {
+    color: var(--mainColor);
+} */
